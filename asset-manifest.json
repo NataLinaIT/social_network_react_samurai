@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/social_network_react_samurai/static/css/main.327f72d5.chunk.css",
-    "main.js": "/social_network_react_samurai/static/js/main.ba362d10.chunk.js",
-    "main.js.map": "/social_network_react_samurai/static/js/main.ba362d10.chunk.js.map",
+    "main.js": "/social_network_react_samurai/static/js/main.a6cc1b47.chunk.js",
+    "main.js.map": "/social_network_react_samurai/static/js/main.a6cc1b47.chunk.js.map",
     "runtime-main.js": "/social_network_react_samurai/static/js/runtime-main.5d7c4c53.js",
     "runtime-main.js.map": "/social_network_react_samurai/static/js/runtime-main.5d7c4c53.js.map",
     "static/js/2.8c3cce71.chunk.js": "/social_network_react_samurai/static/js/2.8c3cce71.chunk.js",
@@ -14,7 +14,7 @@
     "static/js/4.5eaa96d6.chunk.js": "/social_network_react_samurai/static/js/4.5eaa96d6.chunk.js",
     "static/js/4.5eaa96d6.chunk.js.map": "/social_network_react_samurai/static/js/4.5eaa96d6.chunk.js.map",
     "index.html": "/social_network_react_samurai/index.html",
-    "precache-manifest.1ad28752b02df26952b4abf89dbd1427.js": "/social_network_react_samurai/precache-manifest.1ad28752b02df26952b4abf89dbd1427.js",
+    "precache-manifest.8c58c0bc2d8d33b617bad88888567027.js": "/social_network_react_samurai/precache-manifest.8c58c0bc2d8d33b617bad88888567027.js",
     "service-worker.js": "/social_network_react_samurai/service-worker.js",
     "static/css/3.37a7c3d5.chunk.css.map": "/social_network_react_samurai/static/css/3.37a7c3d5.chunk.css.map",
     "static/css/4.47c589d7.chunk.css.map": "/social_network_react_samurai/static/css/4.47c589d7.chunk.css.map",
@@ -30,6 +30,6 @@
     "static/js/runtime-main.5d7c4c53.js",
     "static/js/2.8c3cce71.chunk.js",
     "static/css/main.327f72d5.chunk.css",
-    "static/js/main.ba362d10.chunk.js"
+    "static/js/main.a6cc1b47.chunk.js"
   ]
 }
