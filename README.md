@@ -11,24 +11,19 @@ In the project directory, you can run:
 Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-##Project structure
+## Project structure
 
 ### Login Page:
-<br/>
-<img align="center" src="https://github.com/NataLinaIT/social_network_react_samurai/blob/master/ui/login.png?raw=true"  width="700px"> 
+<img align="center" src="https://github.com/NataLinaIT/social_network_react_samurai/blob/master/ui/login.png?raw=true"  width="800px"> 
 
 ### Profile Page:
-<br/>
-<img align="center" src="https://github.com/NataLinaIT/social_network_react_samurai/blob/master/ui/ProdilePage.png?raw=true"  width="700px"> 
+<img align="center" src="https://github.com/NataLinaIT/social_network_react_samurai/blob/master/ui/ProdilePage.png?raw=true"  width="800px"> 
 
 ### Dialogs Page:
-<br/>
-<img align="center" src="https://github.com/NataLinaIT/social_network_react_samurai/blob/master/ui/Dialogs.png?raw=true"  width="700px"> 
+<img align="center" src="https://github.com/NataLinaIT/social_network_react_samurai/blob/master/ui/Dialogs.png?raw=true"  width="800px"> 
 
 ### Users Page:
-<br/>
-<img align="center" src="https://github.com/NataLinaIT/social_network_react_samurai/blob/master/ui/Users.png?raw=true"  width="700px"> 
+<img align="center" src="https://github.com/NataLinaIT/social_network_react_samurai/blob/master/ui/Users.png?raw=true"  width="800px"> 
 
 ### 404 Page:
-<br/>
-<img align="center" src="https://github.com/NataLinaIT/social_network_react_samurai/blob/master/ui/404.png?raw=true"  width="700px"> 
+<img align="center" src="https://github.com/NataLinaIT/social_network_react_samurai/blob/master/ui/404.png?raw=true"  width="800px"> 
