@@ -1,0 +1,56 @@
+.formStyle {
+  margin-left: 40px;
+  display: flex;
+}
+.formStyle button {
+  position: absolute;
+  right: 40px;
+  margin-top: -70px;
+}
+.formAbout {
+  width: 40%;
+  margin-right: 70px;
+}
+.formAbout li {
+  margin-bottom: 20px;
+}
+.formAbout li input {
+  display: flex;
+  align-items: center;
+}
+.formAbout .nameInput span {
+  min-width: 90px;
+}
+.formAbout .nameInput input {
+  min-width: 220px;
+}
+.formAbout .aboutmeInput textarea {
+  height: 140px;
+}
+.formAbout textarea {
+  min-width: 330px;
+  margin-top: 5px;
+}
+.formAbout li:nth-of-type(1),
+.formAbout li:nth-of-type(2) {
+  display: flex;
+  align-items: flex-end;
+}
+.formAbout li:nth-of-type(1) span,
+.formAbout li:nth-of-type(2) span {
+  margin-right: 15px;
+}
+.formContacts_wrapper {
+  width: 60%;
+}
+.formContacts_wrapper li {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 20px;
+}
+.formContacts_wrapper li input {
+  min-width: 190px;
+}
+.socialTitle {
+  width: 100px;
+}

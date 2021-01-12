@@ -1,0 +1,30 @@
+.paginator {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+.pageNumber:not(:last-of-type) {
+  margin-right: 15px;
+}
+.pageNumber {
+  cursor: pointer;
+}
+.pageNumber:hover {
+  color: #55a6ff;
+}
+.selectedPage {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #55a6ff;
+}
+.prev_btn {
+  margin-right: 26px;
+}
+.next_btn {
+  margin-left: 26px;
+}
+.prev_btn,
+.next_btn {
+  cursor: pointer;
+  margin-top: 3px;
+}

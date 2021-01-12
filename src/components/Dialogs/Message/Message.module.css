@@ -1,0 +1,8 @@
+.message_wrapper{
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.message_wrapper img{
+  margin-right: 15px;
+}

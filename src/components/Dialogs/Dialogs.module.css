@@ -1,0 +1,38 @@
+.dialogs {
+  display: grid;
+  grid-template-areas:
+    "users messages"
+    "form form";
+  grid-template-columns: 2fr 10fr;
+  background-color: #1f2745;
+  border-radius: 10px;
+  padding: 40px;
+}
+.dialogsItems {
+  padding: 10px;
+  color: #ffffff;
+}
+.dialogsItems .active {
+  color: #55a6ff;
+}
+.dialogUser {
+  margin-bottom: 13px;
+}
+.dialogUser a {
+  color: #8c91b6;
+  text-decoration: none;
+}
+.dialogUser .active {
+  color: #55a6ff;
+  font-weight: bold;
+}
+.messages {
+  padding: 10px;
+}
+.dialogs form {
+  grid-area: form;
+}
+.dialogs form textarea {
+  min-width: 90%;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,52 @@
+.header {
+  grid-area: head;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1f2745;
+  height: 100px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.header .logo img {
+  width: 90px;
+}
+.loginBlock {
+  float: right;
+}
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 14px;
+  margin-left: 8px;
+}
+.burger_line {
+  width: 22px;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #8084a9;
+}
+
+.image_small {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+.image_small img {
+  width: 120%;
+}
+.userlogin_block{
+  display: flex;
+  align-items: center;
+}
+.logout_btn{
+  cursor: pointer;
+  margin-left: 40px;
+}

@@ -1,0 +1,23 @@
+.myPosts_wrapper {
+  margin-top: 20px;
+  padding: 40px;
+  background-color: #1f2745;
+  border-radius: 10px;
+}
+
+.posts {
+  margin: 20px 0;
+}
+.myPosts_wrapper form {
+  position: relative;
+  height: 90px;
+}
+.myPosts_wrapper form textarea {
+  width: 94%;
+  padding-bottom: 0;
+}
+.myPosts_wrapper form button {
+  position: absolute;
+  right: 40px;
+  bottom: 0;
+}

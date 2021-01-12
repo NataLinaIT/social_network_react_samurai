@@ -1,0 +1,85 @@
+.profileTop_wrapper {
+  position: relative;
+  background-color: #1f2745;
+  border-radius: 10px;
+}
+.profile_img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: -90px auto 0;
+}
+.profile_img img {
+  width: 100%;
+}
+.profile_background {
+  border-radius: 6px;
+  overflow: hidden;
+}
+.profile_background img {
+  width: 100%;
+}
+
+/* photo edit btn  */
+.editButtonImage {
+  z-index: 999;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin: -20px auto 40px;
+  padding-left: 80px;
+  cursor: pointer;
+}
+.editButtonImage .edit_btn {
+  position: absolute;
+  z-index: -1;
+  right: 4px !important;
+}
+.editButtonImage input {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
+/* status */
+.status_wrapper {
+  margin-left: 40px;
+  margin-bottom: 30px;
+}
+
+/* userdata  */
+.profileData {
+  position: relative;
+}
+.profileData_editbtn {
+  position: absolute;
+  right: 70px;
+}
+.profileInfo_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.profile_userabout {
+  width: 50%;
+  padding-left: 40px;
+}
+.profile_userabout li span {
+  margin-right: 13px;
+}
+.profile_userabout li {
+  margin-bottom: 15px;
+}
+.profile_userabout li div {
+  margin-right: 13px;
+  display: block;
+}
+
+.user_contacts {
+  margin-top: 5px;
+  margin-bottom: 40px;
+  padding-right: 40px;
+  width: 50%;
+}
+.user_contacts .contact {
+  margin-bottom: 10px;
+}

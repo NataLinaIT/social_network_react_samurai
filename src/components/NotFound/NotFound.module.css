@@ -1,0 +1,26 @@
+.notfound_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  position: relative;
+  background-color: #1f2745;
+  border-radius: 10px;
+}
+.notfound_wrapper img {
+  margin: 0 auto;
+}
+.notFound {
+  font-size: 7.5em;
+  margin-top: -250px;
+}
+.title {
+  font-size: 1.25em;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.hilightText {
+  color: #55a6ff;
+  margin-bottom: 50px;
+}
