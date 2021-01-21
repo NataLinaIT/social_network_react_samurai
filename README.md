@@ -30,6 +30,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 <br/>
 <br/>
-<br/>
+### Overview:
 <img align="center" src="https://github.com/NataLinaIT/social_network_react_samurai/blob/master/ui/samurai_network.gif?raw=true"  width="800px"> 
 
