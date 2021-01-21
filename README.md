@@ -27,3 +27,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### 404 Page:
 <img align="center" src="https://github.com/NataLinaIT/social_network_react_samurai/blob/master/ui/404.png?raw=true"  width="800px"> 
+
+<br/>
+<br/>
+<br/>
+<img align="center" src="https://github.com/NataLinaIT/social_network_react_samurai/blob/master/ui/samurai_network.gif?raw=true"  width="800px"> 
+
