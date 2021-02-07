@@ -1,5 +1,14 @@
 # Social network React & Redux SPA App
 
+### Involved Technologies & Tools:
+* React.js
+* Redux | React-redux
+* redux-form
+* redux-thunk
+* API, axios
+* classnames
+
+
 ## Available Scripts
 
 In the project directory and backend directory to install node moduls:
