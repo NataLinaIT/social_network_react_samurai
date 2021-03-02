@@ -3,6 +3,7 @@
 ### Involved Technologies & Tools:
 * React.js
 * Redux | React-redux
+* TypeScript
 * redux-form
 * redux-thunk
 * API, axios
