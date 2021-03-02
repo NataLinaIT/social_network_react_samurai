@@ -2,6 +2,7 @@
 
 ### Involved Technologies & Tools:
 * React.js
+* TypeScript
 * Redux | React-redux
 * TypeScript
 * redux-form
