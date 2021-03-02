@@ -6,15 +6,17 @@ const GET_CAPTCHA_URL_SUCCESS = "GET_CAPTCHA_URL_SUCCESS";
 const SET_USER_IMG = "SET_USER_IMG";
 
 let initialState = {
-  userId: null,
-  email: null,
-  login: null,
+  userId: null as number | null,
+  email: null as string | null,
+  login: null as string | null,
   isAuth: false,
-  captchaUrl: null, //if null, captcha is not required
-  userImg: null,
+  captchaUrl: null as string| null, //if null, captcha is not required
+  userImg: null as string| null,
 };
 
-const authReducer = (state = initialState, action) => {
+type InitialStateType = typeof initialState;
+
+const authReducer = (state = initialState, action: any): InitialStateType => {
   switch (action.type) {
     case SET_USER_DATA:
     case GET_CAPTCHA_URL_SUCCESS: {
@@ -35,24 +37,51 @@ const authReducer = (state = initialState, action) => {
   }
 };
 
-//action creator
+//action creators
+type SetAuthUserDataActionPayloadType = {
+  userId: number | null
+  email: string | null
+  login: string | null
+  isAuth: boolean
+};
 
-const setAuthUserData = (userId, email, login, isAuth) => ({
+type SetAuthUserDataActionType = {
+  type: typeof SET_USER_DATA
+  payload: SetAuthUserDataActionPayloadType
+};
+
+const setAuthUserData = (
+  userId: number | null,
+  email: string | null,
+  login: string | null,
+  isAuth: boolean
+): SetAuthUserDataActionType => ({
   type: SET_USER_DATA,
   payload: { userId, email, login, isAuth },
 });
-const setAuthUserImg = (img) => ({
+
+type SetAuthUserImgActionType = {
+  type: typeof SET_USER_IMG
+  img: string
+}
+
+const setAuthUserImg = (img: string): SetAuthUserImgActionType => ({
   type: SET_USER_IMG,
   img,
 });
 
-const getCaptchaUrlSuccess = (captchaUrl) => ({
+type GetCaptchaUrlSuccessActionType = {
+  type: typeof GET_CAPTCHA_URL_SUCCESS
+  payload: { captchaUrl: string }
+}
+
+const getCaptchaUrlSuccess = (captchaUrl: string): GetCaptchaUrlSuccessActionType => ({
   type: GET_CAPTCHA_URL_SUCCESS,
   payload: { captchaUrl },
 });
 
 //thunk
-export const getAuthUserData = () => async (dispatch) => {
+export const getAuthUserData = () => async (dispatch: any) => {
   const response = await authAPI.authUser();
 
   if (response.data.resultCode === 0) {
@@ -60,10 +89,13 @@ export const getAuthUserData = () => async (dispatch) => {
     dispatch(setAuthUserData(id, email, login, true));
   }
 };
-export const login = (email, password, rememberMe, captcha) => async (
-  dispatch,
-  getState
-) => {
+
+export const login = (
+  email: string,
+  password: string,
+  rememberMe: boolean,
+  captcha: string
+) => async (dispatch: any) => {
   //login
   const response = await authAPI.login(email, password, rememberMe, captcha);
   if (response.data.resultCode === 0) {
@@ -80,18 +112,21 @@ export const login = (email, password, rememberMe, captcha) => async (
   }
   //set user foto in header
   const response2 = await profileAPI.getProfile(response.data.data.userId);
-  dispatch(setAuthUserImg(response2.data.photos.small))
+  dispatch(setAuthUserImg(response2.data.photos.small));
 };
-export const setUserImgInheader = (id) => async (dispatch) => {
+
+export const setUserImgInheader = (id: number) => async (dispatch: any) => {
   const response = await profileAPI.getProfile(id);
-  dispatch(setAuthUserImg(response.data.photos.small))
-}
-export const getCaptchaUrl = () => async (dispatch) => {
+  dispatch(setAuthUserImg(response.data.photos.small));
+};
+
+export const getCaptchaUrl = () => async (dispatch: any) => {
   const response = await securityAPI.getCaptchaUrl();
   const captchaUrl = response.data.url;
   dispatch(getCaptchaUrlSuccess(captchaUrl));
 };
-export const logout = () => async (dispatch) => {
+
+export const logout = () => async (dispatch: any) => {
   const response = await authAPI.logout();
   if (response.data.resultCode === 0) {
     dispatch(setAuthUserData(null, null, null, false));
