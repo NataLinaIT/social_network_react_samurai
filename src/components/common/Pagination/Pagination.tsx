@@ -4,7 +4,15 @@ import cn from "classnames"
 import right_btn from "../../../assets/icons/right.png"
 import left_btn from "../../../assets/icons/left.png"
 
-let Pagination = ({
+type PropsTypes = {
+  currentPage: number
+  totalItemsCount: number
+  pageSize: number
+  onPageChanged: (pageNumber: number) => void
+  portionSize?: number
+}
+
+let Pagination: React.FC<PropsTypes> = ({
   currentPage,
   totalItemsCount,
   pageSize,
@@ -13,7 +21,7 @@ let Pagination = ({
 }) => {
   let pagesCount = Math.ceil(totalItemsCount / pageSize);
 
-  let pages = [];
+  let pages: Array<number> = [];
   for (let i = 1; i <= pagesCount; i++) {
     pages.push(i);
   }
