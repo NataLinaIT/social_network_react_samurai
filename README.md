@@ -4,6 +4,7 @@
 * React.js
 * TypeScript
 * Redux | React-redux
+* TypeScript
 * redux-form
 * redux-thunk
 * API, axios
