@@ -41,7 +41,7 @@ class App extends Component {
             />
             <Route path="/dialogs" render={withSuspense(DialogsContainer)} />
             {/* <Route path="/users" render={() => <UsersContainer />} /> */}
-            <Route path="/users" component={UsersContainer} />
+            <Route path="/users" render={() => <UsersContainer pageTitle={"Samurai"}/>} />
             <Route path="/login" render={() => <LoginPage />} />
             <Route path="/news" render={() => <NotFound />} />
             <Route path="/music" render={() => <NotFound />} />
