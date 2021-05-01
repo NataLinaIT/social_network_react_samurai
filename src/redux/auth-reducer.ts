@@ -1,4 +1,10 @@
-import { authAPI, securityAPI, profileAPI } from "../api/api";
+import {
+  authAPI,
+  securityAPI,
+  profileAPI,
+  ResultCodesEnum,
+  ResultCodeForCaptha,
+} from "../api/api";
 import { stopSubmit } from "redux-form";
 
 const SET_USER_DATA = "SET_USER_DATA";
@@ -10,8 +16,8 @@ let initialState = {
   email: null as string | null,
   login: null as string | null,
   isAuth: false,
-  captchaUrl: null as string| null, //if null, captcha is not required
-  userImg: null as string| null,
+  captchaUrl: null as string | null, //if null, captcha is not required
+  userImg: null as string | null,
 };
 
 type InitialStateType = typeof initialState;
@@ -39,15 +45,15 @@ const authReducer = (state = initialState, action: any): InitialStateType => {
 
 //action creators
 type SetAuthUserDataActionPayloadType = {
-  userId: number | null
-  email: string | null
-  login: string | null
-  isAuth: boolean
+  userId: number | null;
+  email: string | null;
+  login: string | null;
+  isAuth: boolean;
 };
 
 type SetAuthUserDataActionType = {
-  type: typeof SET_USER_DATA
-  payload: SetAuthUserDataActionPayloadType
+  type: typeof SET_USER_DATA;
+  payload: SetAuthUserDataActionPayloadType;
 };
 
 const setAuthUserData = (
@@ -61,9 +67,9 @@ const setAuthUserData = (
 });
 
 type SetAuthUserImgActionType = {
-  type: typeof SET_USER_IMG
-  img: string
-}
+  type: typeof SET_USER_IMG;
+  img: string;
+};
 
 const setAuthUserImg = (img: string): SetAuthUserImgActionType => ({
   type: SET_USER_IMG,
@@ -71,21 +77,23 @@ const setAuthUserImg = (img: string): SetAuthUserImgActionType => ({
 });
 
 type GetCaptchaUrlSuccessActionType = {
-  type: typeof GET_CAPTCHA_URL_SUCCESS
-  payload: { captchaUrl: string }
-}
+  type: typeof GET_CAPTCHA_URL_SUCCESS;
+  payload: { captchaUrl: string };
+};
 
-const getCaptchaUrlSuccess = (captchaUrl: string): GetCaptchaUrlSuccessActionType => ({
+const getCaptchaUrlSuccess = (
+  captchaUrl: string
+): GetCaptchaUrlSuccessActionType => ({
   type: GET_CAPTCHA_URL_SUCCESS,
   payload: { captchaUrl },
 });
 
 //thunk
 export const getAuthUserData = () => async (dispatch: any) => {
-  const response = await authAPI.authUser();
+  const meData = await authAPI.authUser();
 
-  if (response.data.resultCode === 0) {
-    const { id, email, login } = response.data.data;
+  if (meData.resultCode === ResultCodesEnum.Success) {
+    const { id, email, login } = meData.data;
     dispatch(setAuthUserData(id, email, login, true));
   }
 };
@@ -97,21 +105,19 @@ export const login = (
   captcha: string
 ) => async (dispatch: any) => {
   //login
-  const response = await authAPI.login(email, password, rememberMe, captcha);
-  if (response.data.resultCode === 0) {
+  const loginData = await authAPI.login(email, password, rememberMe, captcha);
+  if (loginData.resultCode === ResultCodesEnum.Success) {
     dispatch(getAuthUserData());
   } else {
-    if (response.data.resultCode === 10) {
+    if (loginData.resultCode === ResultCodeForCaptha.CaptchaIsRequired) {
       dispatch(getCaptchaUrl());
     }
     let message =
-      response.data.messages.length > 0
-        ? response.data.messages[0]
-        : "Some error";
+      loginData.messages.length > 0 ? loginData.messages[0] : "Some error";
     dispatch(stopSubmit("login", { _error: message }));
   }
   //set user foto in header
-  const response2 = await profileAPI.getProfile(response.data.data.userId);
+  const response2 = await profileAPI.getProfile(loginData.data.userId);
   dispatch(setAuthUserImg(response2.data.photos.small));
 };
 
