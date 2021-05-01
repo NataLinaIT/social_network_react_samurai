@@ -8,7 +8,7 @@ import HeaderContainer from "./components/Header/HeaderContainer";
 import Navbar from "./components/Navbar/Navbar";
 import UsersContainer from "./components/Users/UsersContainer";
 import Footer from "./components/Footer/Footer";
-import LoginPage from "./components/Login/Login";
+import {LoginPage} from "./components/Login/Login";
 import Preloader from "./components/common/Preloader/Preloader";
 import NotFound from "./components/NotFound/NotFound";
 import { withSuspense } from "./hoc/withSuspence";
