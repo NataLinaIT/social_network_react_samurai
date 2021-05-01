@@ -3,7 +3,7 @@ import s from "./Dialogs.module.css";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 import {reduxForm, Field} from "redux-form";
-import { Textarea } from "../common/FormControls/FormControls";
+import { Textarea } from "../common/FormControls/123";
 import { required, maxLengthCreator } from "../../utils/validators";
 
 const maxLength10 = maxLengthCreator(100);
